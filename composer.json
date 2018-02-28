@@ -10,6 +10,7 @@
         }
     ],
     "require": {
+        "mingyoung/dingtalk": "dev-master"
     },
     "autoload": {
         "psr-4": {
@@ -19,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "cjango\\Dingtalk\\ServiceProvider"
+                "cjango\\Dingtalk\\DingtalkProvider"
             ],
             "aliases": {
                 "Dingtalk": "cjango\\Dingtalk\\Dingtalk"

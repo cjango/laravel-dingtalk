@@ -2,9 +2,9 @@
 
 namespace cjango\Dingtalk;
 
-use Illuminate\Support\ServiceProvider as Provider;
+use Illuminate\Support\ServiceProvider;
 
-class ServiceProvider extends Provider
+class DingtalkProvider extends ServiceProvider
 {
 
     public function boot()
