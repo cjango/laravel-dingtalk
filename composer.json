@@ -1,5 +1,5 @@
 {
-    "name": "cjango/laravel-wechat",
+    "name": "cjango/laravel-dingtalk",
     "description": "钉钉 SDK for Laravel",
     "keywords": ["dingtalk", "laravel", "sdk"],
     "license": "MIT",
