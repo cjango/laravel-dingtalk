@@ -1,0 +1,29 @@
+{
+    "name": "cjango/laravel-wechat",
+    "description": "钉钉 SDK for Laravel",
+    "keywords": ["dingtalk", "laravel", "sdk"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "cjango",
+            "email": "chenjxlg@163.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "cjango\\Dingtalk\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "cjango\\Dingtalk\\ServiceProvider"
+            ],
+            "aliases": {
+                "Dingtalk": "cjango\\Dingtalk\\Dingtalk"
+            }
+        }
+    }
+}
