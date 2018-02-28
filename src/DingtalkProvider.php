@@ -2,6 +2,7 @@
 
 namespace cjango\Dingtalk;
 
+use EasyDingTalk\Application;
 use Illuminate\Support\ServiceProvider;
 
 class DingtalkProvider extends ServiceProvider
@@ -18,6 +19,9 @@ class DingtalkProvider extends ServiceProvider
 
     public function register()
     {
-
+        $this->app->singleton('dingtalk', function ($app) {
+            $config = config('dingtalk');
+            return new Application($config);
+        });
     }
 }

@@ -12,4 +12,8 @@ class Dingtalk extends Facade
         return 'dingtalk';
     }
 
+    public static function __callStatic($name, $args)
+    {
+        return app('dingtalk')->$name;
+    }
 }
