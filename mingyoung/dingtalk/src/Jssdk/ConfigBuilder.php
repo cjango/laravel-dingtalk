@@ -11,8 +11,8 @@
 
 namespace EasyDingTalk\Jssdk;
 
-use function EasyDingTalk\Kernel\Support\str_random;
 use function EasyDingTalk\Kernel\Support\current_url;
+use function EasyDingTalk\Kernel\Support\str_random;
 
 /**
  * Class ConfigBuilder.
@@ -160,12 +160,12 @@ class ConfigBuilder
     public function toArray(): array
     {
         return [
-            'agentId' => $this->agentId,
-            'corpId' => $this->client->corpId(),
+            'agentId'   => $this->agentId,
+            'corpId'    => $this->client->corpId(),
             'timeStamp' => $timestamp = $this->timestamp ?: time(),
-            'nonceStr' => $nonce = $this->nonce ?: str_random(),
+            'nonceStr'  => $nonce = $this->nonce ?: str_random(),
             'signature' => $this->client->signature($this->getUrl(), $nonce, $timestamp),
-            'type' => $this->type,
+            'type'      => $this->type,
             'jsApiList' => $this->apiList,
         ];
     }

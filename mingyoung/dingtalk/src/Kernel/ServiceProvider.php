@@ -11,11 +11,11 @@
 
 namespace EasyDingTalk\Kernel;
 
-use Pimple\Container;
 use GuzzleHttp\Client as GuzzleHttp;
+use Pimple\Container;
 use Pimple\ServiceProviderInterface;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Cache\Simple\FilesystemCache;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class ServiceProvider.
@@ -33,10 +33,10 @@ class ServiceProvider implements ServiceProviderInterface
         $app['http_client'] = function () {
             return new GuzzleHttp([
                 'base_uri' => 'https://oapi.dingtalk.com/',
-                'headers' => [
+                'headers'  => [
                     'Content-Type' => 'application/json',
                 ],
-                'timeout' => 5.0,
+                'timeout'  => 5.0,
             ]);
         };
 

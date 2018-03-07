@@ -31,8 +31,8 @@ class Client extends BaseClient
     {
         return $this->httpGetMethod('dingtalk.corp.role.simplelist', [
             'role_id' => $roleId,
-            'size' => $size,
-            'offset' => $offset,
+            'size'    => $size,
+            'offset'  => $offset,
         ]);
     }
 
@@ -42,8 +42,7 @@ class Client extends BaseClient
      *
      * @return array
      */
-    public function list(int $size = null, int $offset = null)
-    {
+    function list(int $size = null, int $offset = null) {
         return $this->httpGetMethod('dingtalk.corp.role.list', compact('size', 'offset'));
     }
 

@@ -36,7 +36,7 @@ class AsyncClient extends BaseClient
     {
         return $this->httpGetMethod('dingtalk.corp.message.corpconversation.getsendprogress', [
             'agent_id' => $agentId,
-            'task_id' => $taskId,
+            'task_id'  => $taskId,
         ]);
     }
 
@@ -50,7 +50,7 @@ class AsyncClient extends BaseClient
     {
         return $this->httpGetMethod('dingtalk.corp.message.corpconversation.getsendresult', [
             'agent_id' => $agentId,
-            'task_id' => $taskId,
+            'task_id'  => $taskId,
         ]);
     }
 
@@ -73,7 +73,7 @@ class AsyncClient extends BaseClient
     {
         $message = Message::parse($message);
 
-        $this->data['msgtype'] = $message->type();
+        $this->data['msgtype']    = $message->type();
         $this->data['msgcontent'] = json_encode($message->body());
 
         return $this;

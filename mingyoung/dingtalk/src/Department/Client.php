@@ -27,8 +27,7 @@ class Client extends BaseClient
      *
      * @return array
      */
-    public function list(int $id = 0)
-    {
+    function list(int $id = 0) {
         if ($id == 0) {
             return $this->httpGet('department/list');
         }

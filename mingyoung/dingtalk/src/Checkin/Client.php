@@ -31,7 +31,7 @@ class Client extends BaseClient
     {
         return $this->httpGet('checkin/record', [
             'department_id' => $departmentId,
-            'start_time' => $start,
+            'start_time'    => $start,
         ] + $params);
     }
 }

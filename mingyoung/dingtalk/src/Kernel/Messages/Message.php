@@ -68,7 +68,7 @@ abstract class Message
     public function transform(): array
     {
         return [
-            'msgtype' => $this->type,
+            'msgtype'   => $this->type,
             $this->type => $this->attributes,
         ];
     }

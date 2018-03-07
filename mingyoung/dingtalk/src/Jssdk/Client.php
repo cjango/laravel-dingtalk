@@ -68,6 +68,6 @@ class Client extends BaseClient
      */
     protected function cacheKey(): string
     {
-        return 'easydingtalk.jsticket.'.$this->corpId();
+        return 'easydingtalk.jsticket.' . $this->corpId();
     }
 }

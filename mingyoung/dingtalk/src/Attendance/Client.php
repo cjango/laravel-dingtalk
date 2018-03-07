@@ -30,9 +30,9 @@ class Client extends BaseClient
     public function record(array $userIds, string $from, string $to)
     {
         return $this->httpPostJson('attendance/listRecord', [
-            'userIds' => $userIds,
+            'userIds'       => $userIds,
             'checkDateFrom' => $from,
-            'checkDateTo' => $to,
+            'checkDateTo'   => $to,
         ]);
     }
 
@@ -43,12 +43,11 @@ class Client extends BaseClient
      *
      * @return array
      */
-    public function list(string $userId, string $from, string $to)
-    {
+    function list(string $userId, string $from, string $to) {
         return $this->httpPostJson('attendance/list', [
-            'userId' => $userId,
+            'userId'       => $userId,
             'workDateFrom' => $from,
-            'workDateTo' => $to,
+            'workDateTo'   => $to,
         ]);
     }
 }
