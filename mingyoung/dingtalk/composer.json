@@ -1,0 +1,39 @@
+{
+    "name": "mingyoung/dingtalk",
+    "description": "钉钉 SDK",
+    "keywords": [
+        "dingtalk", "dingding", "dingtalk-sdk"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mingyoung",
+            "email": "mingyoungcheung@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "adbario/php-dot-notation": "^2.0",
+        "guzzlehttp/guzzle": "^6.2",
+        "monolog/monolog": "^1.23",
+        "pimple/pimple": "^3.0",
+        "symfony/cache": "^3.3"
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.9",
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "EasyDingTalk\\": "src/"
+        },
+        "files": [
+            "src/Kernel/Support/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "EasyDingTalk\\Tests\\": "tests/"
+        }
+    }
+}

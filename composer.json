@@ -10,12 +10,20 @@
         }
     ],
     "require": {
-        "mingyoung/dingtalk": "dev-master"
+        "php": ">=7.0",
+        "adbario/php-dot-notation": "^2.0",
+        "guzzlehttp/guzzle": "^6.2",
+        "pimple/pimple": "^3.0",
+        "symfony/cache": "^3.3"
     },
     "autoload": {
         "psr-4": {
+            "EasyDingTalk\\": "mingyoung/dingtalk/src/",
             "cjango\\Dingtalk\\": "src/"
-        }
+        },
+        "files": [
+            "src/Kernel/Support/helpers.php"
+        ]
     },
     "extra": {
         "laravel": {
