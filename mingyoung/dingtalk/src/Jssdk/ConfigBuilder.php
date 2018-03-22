@@ -11,9 +11,6 @@
 
 namespace EasyDingTalk\Jssdk;
 
-use function EasyDingTalk\Kernel\Support\current_url;
-use function EasyDingTalk\Kernel\Support\str_random;
-
 /**
  * Class ConfigBuilder.
  *
@@ -88,7 +85,7 @@ class ConfigBuilder
     public function getUrl(): string
     {
         if (is_null($this->url)) {
-            $this->url = current_url();
+            $this->url = \Request::url();
         }
 
         return $this->url;
@@ -163,7 +160,7 @@ class ConfigBuilder
             'agentId'   => $this->agentId,
             'corpId'    => $this->client->corpId(),
             'timeStamp' => $timestamp = $this->timestamp ?: time(),
-            'nonceStr'  => $nonce = $this->nonce ?: str_random(),
+            'nonceStr'  => $nonce = $this->nonce ?: uniqid(),
             'signature' => $this->client->signature($this->getUrl(), $nonce, $timestamp),
             'type'      => $this->type,
             'jsApiList' => $this->apiList,
