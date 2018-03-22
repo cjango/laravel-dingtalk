@@ -13,7 +13,7 @@ class DingtalkProvider extends ServiceProvider
         // 发布配置
         $source = realpath(__DIR__ . '/config.php');
         $this->publishes([
-            $source => config_path('wechat.php'),
+            $source => config_path('dingtalk.php'),
         ]);
     }
 
