@@ -8,6 +8,8 @@ use Illuminate\Support\ServiceProvider;
 class DingtalkProvider extends ServiceProvider
 {
 
+    protected $defer = true;
+
     public function boot()
     {
         // 发布配置
@@ -23,5 +25,10 @@ class DingtalkProvider extends ServiceProvider
             $config = config('dingtalk');
             return new Application($config);
         });
+    }
+
+    public function provides()
+    {
+        return ['dingtalk'];
     }
 }
