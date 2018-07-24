@@ -14,7 +14,7 @@
         "adbario/php-dot-notation": "^2.0",
         "guzzlehttp/guzzle": "^6.2",
         "pimple/pimple": "^3.0",
-        "symfony/cache": "^3.3"
+        "symfony/cache": "*"
     },
     "autoload": {
         "psr-4": {
